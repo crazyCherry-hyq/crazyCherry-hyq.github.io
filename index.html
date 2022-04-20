@@ -234,7 +234,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-04-18 13:38:32 / 修改时间：15:38:10" itemprop="dateCreated datePublished" datetime="2022-04-18T13:38:32+08:00">2022-04-18</time>
+      <time title="创建时间：2022-04-18 13:38:32 / 修改时间：15:44:05" itemprop="dateCreated datePublished" datetime="2022-04-18T13:38:32+08:00">2022-04-18</time>
     </span>
 
   
@@ -259,10 +259,7 @@
 <blockquote>
 <p>程序的运行需要内存。对于持续运行的服务进程，必须及时释放不再用到的内存，否则占用越来越高，轻则影响系统性能，重则导致进程崩溃。不再用到的内存，没有及时释放，就叫做内存泄漏</p>
 </blockquote>
-<p>2：this指向</p>
-<blockquote>
-<p>闭包的this指向的是window</p>
-</blockquote>
+<p>2：注意闭包的this指向</p>
 
            <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
       
@@ -318,9 +315,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-04-07 15:09:46 / 修改时间：15:17:46" itemprop="dateCreated datePublished" datetime="2022-04-07T15:09:46+08:00">2022-04-07</time>
+      <time title="创建时间：2022-04-07 15:09:46" itemprop="dateCreated datePublished" datetime="2022-04-07T15:09:46+08:00">2022-04-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-20 11:49:25" itemprop="dateModified" datetime="2022-04-20T11:49:25+08:00">2022-04-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -342,8 +345,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 示例1</span></span><br><span class="line"><span class="keyword">const</span> [a,b] = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a) <span class="comment">// 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+          <p>描述：ES6 允许按照一定模式从数组和对象中提取值，对变量进行赋值，这就称为解构赋值</p>
+<h3 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 示例1</span></span><br><span class="line"><span class="keyword">const</span> [a,b] = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a) <span class="comment">// 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 示例1</span></span><br><span class="line"><span class="keyword">const</span> &#123; name, age, sayhi &#125; = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;早安诺曦&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="string">&#x27;18&#x27;</span>,</span><br><span class="line">  <span class="attr">sayhi</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;我今年18岁，名字叫早安诺曦&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name) <span class="comment">// 早安诺曦</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(age) <span class="comment">// 18</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sayhi) <span class="comment">// function</span></span><br></pre></td></tr></table></figure>
+
+<p>1：解构赋值允许指定默认值<br>2：注意，ES6 内部使用严格相等运算符（&#x3D;&#x3D;&#x3D;），判断一个位置是否有值。所以，只有当一个数组成员严格等于undefined，默认值才会生效</p>
 
            <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
       
@@ -389,7 +396,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/07/var%E5%92%8Clet%E5%92%8Cconst/" class="post-title-link" itemprop="url">var和let和const</a>
+          <a href="/2022/04/07/var%E5%92%8Clet%E5%92%8Cconst/" class="post-title-link" itemprop="url">关于 var、let 和 const 三个关键字的区别</a>
         </h2>
 
         <div class="post-meta-container">
@@ -399,9 +406,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-04-07 14:39:25 / 修改时间：15:23:24" itemprop="dateCreated datePublished" datetime="2022-04-07T14:39:25+08:00">2022-04-07</time>
+      <time title="创建时间：2022-04-07 14:39:25" itemprop="dateCreated datePublished" datetime="2022-04-07T14:39:25+08:00">2022-04-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-20 13:38:16" itemprop="dateModified" datetime="2022-04-20T13:38:16+08:00">2022-04-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -441,6 +454,10 @@
 <li>声明<strong>会</strong>形成作用域</li>
 <li><strong>不可以</strong>同时声明一样变量名</li>
 </ol>
+<p><strong>const定义变量的注意点</strong></p>
+<blockquote>
+<p>①：一定要赋初始值<br>②：一般常量使用大写（潜规则）<br>③：常量的值不能修改<br>④：块级作用域<br>⑤：对于数组和对象的元素修改，不算做对常量的修改，不会报错</p>
+</blockquote>
 
            <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
       
